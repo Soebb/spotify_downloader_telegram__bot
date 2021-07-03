@@ -8,13 +8,13 @@ import eyed3.id3
 import eyed3
 import lyricsgenius
 import telepot
-
+import os
 spotifyy = spotipy.Spotify(
     client_credentials_manager=SpotifyClientCredentials(client_id='a145db3dcd564b9592dacf10649e4ed5',
                                                         client_secret='389614e1ec874f17b8c99511c7baa2f6'))
 genius = lyricsgenius.Genius('biZZReO7F98mji5oz3cE0FiIG73Hh07qoXSIzYSGNN3GBsnY-eUrPAVSdJk_0_de')
 
-token = 'token bot'
+token = os.environ.get('BOT_TOKEN')
 
 bot = telepot.Bot(token)
 
