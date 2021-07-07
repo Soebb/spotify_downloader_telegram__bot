@@ -14,8 +14,10 @@ spotifyy = spotipy.Spotify(
                                                         client_secret='389614e1ec874f17b8c99511c7baa2f6'))
 genius = lyricsgenius.Genius('biZZReO7F98mji5oz3cE0FiIG73Hh07qoXSIzYSGNN3GBsnY-eUrPAVSdJk_0_de')
 
-token = os.environ.get('BOT_TOKEN')
-
+if 'BOT_TOKEN' in os.environ:
+    token = os.environ.get('BOT_TOKEN')
+else:
+    token = 'token bot'
 bot = telepot.Bot(token)
 
 def DOWNLOADMP3(link,chat_id):
