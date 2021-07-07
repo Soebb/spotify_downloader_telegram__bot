@@ -5,7 +5,10 @@ import requests
 import threading
 import os
 
-token = os.environ.get('BOT_TOKEN')
+if 'BOT_TOKEN' in os.environ:
+    token = os.environ.get('BOT_TOKEN')
+else:
+    token = 'token bot'
 bot = telepot.Bot(token)
 
 sort = {}
