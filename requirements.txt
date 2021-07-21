@@ -1,6 +1,7 @@
 eyeD3
 lyricsgenius
 requests
+ffmpeg-python
 spotipy
 youtube_dl
 youtube_search
