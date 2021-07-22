@@ -1,6 +1,5 @@
 {
   "name": "spotifydlbot",
-  "stack": "container",
   "env": {
     "BOT_TOKEN": {
       "description": "You bot token",
