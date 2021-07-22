@@ -1,5 +1,6 @@
 from __future__ import unicode_literals
 import spotipy
+import ffmpeg
 from spotipy.oauth2 import SpotifyClientCredentials
 import requests
 from youtube_search import YoutubeSearch
@@ -98,7 +99,7 @@ def DOWNLOADMP3(link,chat_id):
             LINKASLI = URLSSS['url_suffix']
             break
 
-    YTLINK = str('https://www.youtube.com/' + LINKASLI)
+    YTLINK = str("https://www.youtube.com/" + LINKASLI)
     options = {
         # PERMANENT options
         'format': 'bestaudio/best',
