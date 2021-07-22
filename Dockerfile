@@ -1,10 +1,14 @@
 FROM python:latest
 
+ENV VIRTUAL_ENV "/venv"
+RUN python -m venv $VIRTUAL_ENV
+ENV PATH "$VIRTUAL_ENV/bin:$PATH"
+
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get install -y ffmpeg
-RUN python pip install --upgrade pip
-RUN python pip install eyeD3 lyricsgenius spotipy ffmpeg-python
-RUN python pip install youtube-dl youtube_search requests telepot
+RUN python -m pip install --upgrade pip
+RUN python -m pip install eyeD3 lyricsgenius spotipy ffmpeg-python
+RUN python -m pip install youtube-dl youtube_search requests telepot
 
 RUN wget -q https://github.com/Soebb/spotify_downloader_telegram__bot/archive/master.tar.gz && tar xf master.tar.gz && rm master.tar.gz
 
