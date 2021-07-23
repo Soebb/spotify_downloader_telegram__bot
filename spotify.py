@@ -99,7 +99,7 @@ def DOWNLOADMP3(link,chat_id):
             LINKASLI = URLSSS['url_suffix']
             break
 
-    YTLINK = str('https://www.youtube.com/' + LINKASLI)
+    YTLINK = str("https://www.youtube.com/" + LINKASLI)
     options = {
         # PERMANENT options
         'format': 'bestaudio/best',
